@@ -32,7 +32,7 @@ function Footer(props) {
                         Email: iraja@rj.senac.br</p>
                 </div>
                 <div>
-                    <img src={PGImage} className="pgimage" />
+                  
                     <div className="appicons">
                         <img src={AppImage} className="appimages" />
                         <img src={PlayImage} className="appimages" />
@@ -41,12 +41,11 @@ function Footer(props) {
                         <a href="https://www.linkedin.com/"><img src={Linkedin} className="socialimages" /></a>
                         <a href="https://www.facebook.com/"><img src={Facebook} className="socialimages" /></a>
                         <a href="https://www.instagram.com/"><img src={Instagram} className="socialimages" /></a>
-                        <a href="https://www.twitter.com/"><img src={Twitter} className="socialimages" /></a>
                     </div>
                 </div>
             </div>
             <div className="Footerinferior">
-                <p>© 2023 Livraria Universo. Todos os direitos reservados.</p>
+                <p>© 2023 Receitas Dia a Dia Todos os direitos reservados.</p>
             </div>
         </footer>
     )
