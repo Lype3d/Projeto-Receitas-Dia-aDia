@@ -69,12 +69,16 @@ footer a {
   max-width: 80%;
 }
 
-.socialimages{
+.socialicons a{
   width: 10%;
-  margin: 0 3%;
+  margin: 0 4%;
   cursor: pointer;
 }
 
-.socialimages:hover{
+.socialicons :hover{
     transform: scale(1.1);
+}
+
+p{
+  font-size: 20px;
 }
