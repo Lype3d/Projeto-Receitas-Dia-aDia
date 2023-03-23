@@ -33,7 +33,7 @@ function Header(props) {
                     <form className="search-box"  onSubmit={(e) => { sessionStorage.setItem('namesearch', search)
                         navigate("/search");
                     }}>
-                        <input type="text" className="search-text" id="namesearch" placeholder="Pesquisar.."
+                        <input type="text" className="search-text" id="namesearch" placeholder="Encontre uma receita..."
                             onChange={(e) => { setSearch(e.target.value) }} />
                         <button type="submit" className="search-btn"  >
                             <img className="loupe-blue" src={LoupeBlue} width="25px" height="25px" />

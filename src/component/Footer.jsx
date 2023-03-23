@@ -18,8 +18,9 @@ function Footer(props) {
 
                
                 <div>
-                    <p>Baixe o App Receitas Dia a Dia</p>
+                    
                     <div className="appicons">
+                    <p>Baixe o App Receitas Dia a Dia</p>
                         <img src={AppImage} className="appimages" />
                         <img src={PlayImage} className="appimages" />
                     </div>
@@ -38,7 +39,7 @@ function Footer(props) {
                 </div>
             </div>
             <div className="Footerinferior">
-                <p>© 2023 Receitas Dia a Dia Todos os direitos reservados.</p>
+                <p> Receitas Dia a Dia © Todos os direitos reservados.</p>
             </div>
         </footer>
     )

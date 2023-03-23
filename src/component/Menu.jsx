@@ -10,7 +10,7 @@ function Menu(props) {
             <ul className="Menu">
                 <Link to="/about"><li>SOBRE</li></Link>
                 <Link to="/products"><li>RECEITAS</li></Link>
-                <Link to="/contact"><li>LOGIN</li></Link>
+                <Link to="/contact"><li>Enviar sua receita</li></Link>
             
 
             </ul>
