@@ -8,7 +8,7 @@
 }
 
 .bg-contact{
-background-color:rgba(63, 210, 137, 0.9);
+background-color:rgb(245, 134, 95, 0.8);
 
 }
 
@@ -28,4 +28,10 @@ background-color:rgba(63, 210, 137, 0.9);
 .error-message{
     color: red;
     z-index: 10px;
+}
+.btn-btn-success{
+    background-color:rgb(245, 134, 95);
+    border-radius: 8px;
+    border: 2px solid black;
+    
 }

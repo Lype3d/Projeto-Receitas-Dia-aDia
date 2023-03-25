@@ -18,32 +18,32 @@
 }
 
 .titleAbout {
-  background-color: black;
-  color: white;
+  background-color: rgb(245, 134, 95, 0.8);
   font-size: calc(15px, 5vw, 30px);
   font-weight: 800;
   border-radius: 20px;
+  
 }
 
 .textAbout {
-  background-color: black;
-  color: white;
+  background-color:rgb(245, 134, 95, 0.5);
+  color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 1rem;
   
 }
 
 .teamAbout{
-  background-color: black;
-  color: white;
+  background-color:rgb(245, 134, 95, 0.8);
+  color: rgb(0, 0, 0);
   border-radius: 20px;
   font-size: calc(15px, 5vw, 30px);
   font-weight: 800;
 }
 
 .containerTeamAbout{
-  background-color: black;
-  color: white;
+  background-color:rgb(245, 134, 95, 0.5);
+  color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 2rem;
   display: flex;
@@ -61,12 +61,12 @@
 }
 
 .equipe:hover{
-  background-color: rgb(63, 210, 137);
+  background-color:rgb(245, 134, 95, 0.5);
   padding: 8px;
   border: 2px solid white;
 }
 .nameIndivdual{
-  background-color: black;
+  background-color: rgb(245, 134, 95);
   padding: 2px;
   border: 2px solid white;
   border-radius: 5px;
@@ -80,8 +80,8 @@
 }
 
 .aSocial:link, .aSocial:visited {
-  background-color:  rgb(63, 210, 137);
-  color: white;
+  background-color:  rgba(233, 67, 7, 0.5);
+  color: rgb(0, 0, 0);
   padding: 5px 5px;
   border: 2px solid white;
   border-radius: 5px;
