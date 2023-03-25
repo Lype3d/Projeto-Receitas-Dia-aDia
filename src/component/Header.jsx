@@ -5,8 +5,6 @@ import { Link, Navigate } from "react-router-dom";
 import '../css/Header.css';
 import Menu from "./Menu";
 import LoupeBlue from "../images/loupe-blue.svg"
-import LoginIcon from "../images/iconlogin.png"
-import CartIcon from "../images/iconcart.png"
 import { useNavigate } from 'react-router-dom';
 import { useCart } from "./CartContext";
 
@@ -40,18 +38,13 @@ function Header(props) {
                         </button>
 
                     </form>
-                    <div className="div-login">
-                    <button className="btn-cart"><Link to="/login"><img src={LoginIcon} width="50px" height="50px" className="header-icon" /></Link>
-                        <p className=" pt-2">Olá, bem vindo(a)!<br />Faça seu <Link to="/login"><strong>login</strong></Link></p></button>
-                    </div>
-
-                    <Link to="/cart"><button className="btn-cart"><img src={CartIcon} width="50px" height="50px" className="header-icon text-sucess" />{ itemsCount >0 && <span>({itemsCount})</span>}</button></Link>
-                </div>
-                <div className="header-bottom">
-                    <nav>
+                 <div className="header-bottom">
+                    <nav className="linksHeader">
                         {Menu(props)}
                     </nav>
                 </div>
+                </div>
+                
             </div>
         </header >) : (<header className="header-admin">
             <Link to="/admin" className="link-home-admin"><img src={props.logo} className="logo-admin" /></Link>

@@ -8,9 +8,9 @@ function Menu(props) {
         return (
 
             <ul className="Menu">
-                <Link to="/about"><li>SOBRE</li></Link>
-                <Link to="/products"><li>RECEITAS</li></Link>
-                <Link to="/contact"><li>Enviar sua receita</li></Link>
+                <Link to="/about" ><li className="menuLink1">SOBRE</li></Link>
+                <Link to="/products" ><li className="menuLink2">RECEITAS</li></Link>
+                <Link to="/contact" ><li className="menuLink3">ENVIAR SUA RECEITA</li></Link>
             
 
             </ul>

@@ -2,16 +2,19 @@
 
 .Header {
   display: flex;
-  background-color: black;
+  background-color: #2E2F35;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 0 8%;
   padding-bottom: 1%;
+  align-items: baseline;
+  margin: -2%;
+  margin-bottom: -3%;
 }
 
 
 header a {
-  color: white;
+  color: #f6f6f6;
 }
 
 .link-home {
@@ -20,19 +23,22 @@ header a {
 }
 
 header .Logo {
-  width: 60%;
-  margin-top: 1%;
+  width: 70%;
+ 
 }
 
 .header-right {
-  width: 80%;
+width: 100%;
+align-items: baseline;
+justify-content: space-around;
 }
 
 .header-top {
 
   display: flex;
-  align-items: center;
-  padding-left: 10%;
+  align-items: baseline;
+  justify-content: space-around;
+ 
 
 }
 
@@ -69,9 +75,16 @@ header .Logo {
   align-items: center;
 }
 
+.header-bottom{
+  display: flex;
+  justify-content: space-around;
+}
+.linksHeader {
+  display: flex;
+  justify-content: space-around;
+}
 
-
-.div-login {
+/* .div-login {
   padding: 0 7%;
   padding-left: 20%;
 }
@@ -86,27 +99,36 @@ header .Logo {
   float: left;
   margin-left: 10px;
 
-}
+} */
 
 
 .Menu {
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  justify-content: space-around;
   font-weight: 800;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  
+
 }
 
 .Menu li:hover {
-  color: #1eb65d;
+  color: #f5865f;
 }
 
-.btn-cart{
-	background-color: black;
-  color:#1eb65d;
-  border: none;
+.menuLink1{
+  padding: 20px;
+  padding-left: 300px;
 }
 
+.menuLink2{
+  padding: 20px;
+}
+
+.menuLink3{
+  padding: 20px;
+  padding-right: 0%;
+}
 
 .header-admin {
   display: flex;
@@ -148,8 +170,9 @@ header .Logo {
 
 @media (max-width: 730px) {
   .Header {
-    flex-direction: column;
+    flex-direction: row;
     padding: 3%;
+    
 
   }
 
@@ -175,6 +198,7 @@ header .Logo {
 
   .header-right {
     align-self: center;
+    
   }
 
 
@@ -185,8 +209,9 @@ header .Logo {
 @media (max-width: 620px) {
 
   .header-top {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
   }
 
   .title-header {
