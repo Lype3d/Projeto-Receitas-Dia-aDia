@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: [<Header model="default" logo={Logo} />, <Home chamada={"Confira nossas novidades literárias!"} imgbanner={ImgBanner} logo={Logo} />, <Footer logo={Logo} />],
+        element: [<Header model="default" logo={Logo} />, <Home chamada={"Confira algumas de Nossas Receitas!"} imgbanner={ImgBanner} logo={Logo} />, <Footer logo={Logo} />],
       },
       {
         path: '/search',
