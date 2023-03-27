@@ -1,12 +1,9 @@
 import React from "react";
 import '../css/Footer.css';
 import { Link } from "react-router-dom";
-import PGImage from "../images/pgimages.png"
 import AppImage from "../images/app.png"
 import PlayImage from "../images/play.png"
-import Linkedin from "../images/linkedinfooter.png"
-import Facebook from "../images/facebook.png"
-import Instagram from "../images/instagram.png"
+import LogoFooter from "../images/logoFooter.png"
 
 
 
@@ -14,8 +11,16 @@ function Footer(props) {
     return (
         <footer className="Footer">
             <div className="Footersuperior">
-                <Link to="/" className="link-home-footer"></Link>
-
+                <Link to="/" className="link-home-footer">
+                    <img src={LogoFooter}  />
+                </Link>
+              
+                <div className="footer-top-center">
+                    <h2>SAC</h2>
+                    <h7>Serviço de Atendimento ao Consumidor</h7><br /> <br />
+                    <a>0800 7070 0171</a><br />
+                    <a>Receitas@diaadia.com</a>
+                </div>
                
                 <div>
                     

@@ -1,7 +1,7 @@
 /*---------------------------Footer ---------------------------*/
 
 footer {
-  background-color: orange;
+  background-color:#f5865f;
   color: white;
   padding-top: 3%;
 
@@ -13,7 +13,7 @@ footer {
 }
 
 .link-home-footer img {
-  width: 100%;
+  width: 150.33px;
 }
 
 footer a {
@@ -57,7 +57,7 @@ footer a {
 }
 
 .Footerinferior {
-  background-color: black;
+  background-color: #2E2F35;
   color: white;
   text-align: center;
   font-weight: bolder;
