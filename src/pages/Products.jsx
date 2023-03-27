@@ -53,7 +53,7 @@ function Products () {
 
   return (<main className="mainproducts">
 
-    <h1 className="title">Nossos Livros</h1>
+    <h1 className="title">Receitas</h1>
 
     <div className="products">
       {books.length === 0 ? (<div className="loader"></div>) : (

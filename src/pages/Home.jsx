@@ -72,7 +72,7 @@ function Home(props) {
                                     <span className="product-parc-home">ou em até 10x de R$ {showParc(book.price)}</span>
                                     <div className="buttons-home">
                                         <Link to={`/products/${book.id}`} className="btn-home">Ler mais</Link>
-                                        <button className="btn-home bg-success border-0" onClick= {() => add(book)}>Comprar</button>
+                                        <button className="btn-home bg-success border-0" onClick= {() => add(book)}>ver</button>
                                     </div>
                                 </div>
                             ))
