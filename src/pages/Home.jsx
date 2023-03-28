@@ -5,14 +5,23 @@ import React from "react";
 import '../css/Home.css';
 import blogFetch from "../axios/config";
 import { useCart } from "../component/CartContext";
-
-
+import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
+import Lasanha from "../images/lasanha.jpg"
+import Frango from "../images/frango.jpg"
+import Bolo from "../images/bolo.jpg"
 
 function Home(props) {
 
+        const [index, setIndex] = useState(0);
+      
+        const handleSelect = (selectedIndex, e) => {
+          setIndex(selectedIndex);
+        };
+
     const cart = useCart()
-    const add = (product) =>{
-      cart.addToCart(product)
+    const add = (product) => {
+        cart.addToCart(product)
     }
     const [books, setBooks] = useState([])
 
@@ -56,31 +65,71 @@ function Home(props) {
     return (
 
         <div className="home-main">
-            <img src={props.imgbanner} className="imgBannerHome"></img>
-            <div>
-                <h1 className="txtmainhome">{props.chamada}</h1>
-                <div className="SpaceCard">
+            
+                <Carousel activeIndex={index} onSelect={handleSelect} >
+                    <Carousel.Item className='carrousel'>
+                        <img
+                            className=" img-carrousel"
+                            src={Lasanha}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption className='text-carrousel'>
+                            <h1>Lasanha à Bolonhesa</h1>
+                    
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item className='carrousel'>
+                        <img
+                            className=" img-carrousel "
+                            src={Frango}
+                            alt="Second slide"
+                        />
+
+                        <Carousel.Caption className='text-carrousel'>
+                            <h1>Frango Empanado </h1>
+                            
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item className='carrousel'>
+                        <img
+                            className=" img-carrousel "
+                            src={Bolo}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption className='text-carrousel'>
+                            <h1>Bolo de Chocolate</h1>
+                           
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+
+                
+                <div>
+                    <h1 className="txtmainhome">{props.chamada}</h1>
+                    <div className="SpaceCard">
 
 
-                    <div className="products-home">
-                        {books.length === 0 ? (<div className="loader"></div>) : (
-                            books.slice(0, 3).map((book) => (
-                                <div className="product-home" key={book.id}>
-                                    <img className="product-image-home" src={book.image} />
-                                    <h4 className="product-name-home">{book.name}</h4>
-                                    <div className="buttons-home">
-                                        <Link to={`/products/${book.id}`} className="btn-home">ver receita</Link>
+                        <div className="products-home">
+                            {books.length === 0 ? (<div className="loader"></div>) : (
+                                books.slice(0, 3).map((book) => (
+                                    <div className="product-home" key={book.id}>
+                                        <img className="product-image-home" src={book.image} />
+                                        <h4 className="product-name-home">{book.name}</h4>
+                                        <div className="buttons-home">
+                                            <Link to={`/products/${book.id}`} className="btn-home">ver receita</Link>
+                                        </div>
                                     </div>
-                                </div>
-                            ))
-                        )}
+                                ))
+                            )}
+                        </div>
+
                     </div>
+                </div >
 
-                </div>
             </div >
-
-        </div >
-    )
+            
+    )        
 }
 
-export default Home;
+            export default Home;

@@ -9,10 +9,12 @@
 
 }
 
-.imgBannerHome {
-	width: 100%;
-}
 
+.img-carrousel{
+
+	width: 100%;
+	height: 80%;
+}
 .txtmainhome {
 	color: black;
 	text-align: center;
