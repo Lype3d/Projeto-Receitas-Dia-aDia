@@ -24,9 +24,17 @@ footer a {
   width: 80%;
 }
 
+.appicons{
+  
+  color: #f6f6f6;
+}
+
 .appimages {
-  margin: 10% 0;
-  width: 30%
+  padding: 10px;
+  width: 15%;
+  justify-content: center;
+
+  
 }
 
 .Footersuperior {
@@ -56,29 +64,35 @@ footer a {
   margin: 0;
 }
 
-.Footerinferior {
+.Footerinferior  {
   background-color: #2E2F35;
-  color: white;
+  color: #f6f6f6;
   text-align: center;
-  font-weight: bolder;
-  padding-top: 0.01%;
+ padding: 10px 0px;
+ 
 }
 
 .pgimage {
 
-  max-width: 80%;
+  max-width: 30%;
 }
 
-.socialicons a{
-  width: 10%;
-  margin: 0 4%;
+.socialicons{
+  width: 20%;
+  padding: 0px  0px  20px 0px;
+  margin: auto;
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 .socialicons :hover{
-    transform: scale(1.1);
+    color: #2E2F35;
 }
 
 p{
   font-size: 20px;
+  text-align: center;
 }
+

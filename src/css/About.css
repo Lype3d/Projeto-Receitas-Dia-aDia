@@ -18,7 +18,7 @@
 }
 
 .titleAbout {
-  background-color: rgb(245, 134, 95, 0.8);
+  
   font-size: calc(15px, 5vw, 30px);
   font-weight: 800;
   border-radius: 20px;
@@ -26,7 +26,7 @@
 }
 
 .textAbout {
-  background-color:rgb(245, 134, 95, 0.5);
+  
   color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 1rem;
@@ -34,7 +34,7 @@
 }
 
 .teamAbout{
-  background-color:rgb(245, 134, 95, 0.8);
+ 
   color: rgb(0, 0, 0);
   border-radius: 20px;
   font-size: calc(15px, 5vw, 30px);
@@ -42,7 +42,7 @@
 }
 
 .containerTeamAbout{
-  background-color:rgb(245, 134, 95, 0.5);
+  
   color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 2rem;
@@ -56,39 +56,36 @@
 
 /* equipe */
 .equipe{
-  border-radius: 2%;
-  padding: 10px;
+  width: 200px;
+  height: 200px;
 }
 
 .equipe:hover{
-  background-color:rgb(245, 134, 95, 0.5);
+ 
   padding: 8px;
-  border: 2px solid white;
+ 
 }
-.nameIndivdual{
-  background-color: rgb(245, 134, 95);
-  padding: 2px;
-  border: 2px solid white;
-  border-radius: 5px;
+.nameIndivdual4{
+    
+
 }
 
 .imgIndiv{
-  border-radius: 2%;
-  border: 2px solid white;
-  max-width: 16rem;
-  max-height: 16rem;
+  
+ 
+  width: 150px;
+ height: 150px;
 }
 
 .aSocial:link, .aSocial:visited {
-  background-color:  rgba(233, 67, 7, 0.5);
+
   color: rgb(0, 0, 0);
   padding: 5px 5px;
-  border: 2px solid white;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
 }
 
 .aSocial:hover, .aSocial:active {
-  background-color:  rgb(47, 160, 104);
+  background-color:#2e2f35;
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import '../css/Header.css';
 import { Link } from "react-router-dom";
+import Talher from '../images/talher.png'
+import Enviar from '../images/enviar.png'
+import Info from '../images/info.png'
 
 function Menu(props) {
 
@@ -8,13 +11,15 @@ function Menu(props) {
         return (
 
             <ul className="Menu">
-                <Link to="/about" ><li className="menuLink1">SOBRE</li></Link>
-                <Link to="/products" ><li className="menuLink2">RECEITAS</li></Link>
-                <Link to="/contact" ><li className="menuLink3">ENVIAR SUA RECEITA</li></Link>
+                <Link to="/about" ><img src={Info}className="img1"></img>
+Sobre</Link>
+                <Link to="/products" ><img src={Talher}className="img1"></img>Receitas</Link>
+                <Link to="/contact" >Envie sua receita<img src={Enviar}className="img2"></img></Link>
             
 
             </ul>
         )
+
     } else {
         return (
             <ul className="Menu">
