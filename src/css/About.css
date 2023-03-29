@@ -56,25 +56,23 @@
 
 /* equipe */
 .equipe{
+    border-radius: 2%;
+  padding: 10px;
   width: 200px;
-  height: 200px;
+  height: 400px;
 }
 
 .equipe:hover{
  
-  padding: 8px;
+  padding: 10px;
  
 }
-.nameIndivdual4{
-    
 
-}
 
 .imgIndiv{
-  
- 
   width: 150px;
- height: 150px;
+ height: 200px;
+ background-size: cover;
 }
 
 .aSocial:link, .aSocial:visited {
@@ -87,5 +85,5 @@
 }
 
 .aSocial:hover, .aSocial:active {
-  background-color:#2e2f35;
+  background-color:#f6f6f6;
 }
