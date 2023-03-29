@@ -1,16 +1,17 @@
 .container-admin {
     min-height: 700px;
     text-align: center;
+    margin-left: 300px;
     padding: 5% 8%;
     text-transform: uppercase;
-    background-image: url('../images/bgadmin.jpg');
+    background-image: url('../images/');
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
 .menu-admin {
-    background-color: white;
+    background-color:rgb(253, 184, 10);
     padding: 2%;
     border-radius: 25px;
     max-width: 600px;
