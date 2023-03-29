@@ -3,7 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #432073;
+    background-color: #f6f6f6;
+    
 
 }
 
@@ -55,7 +56,7 @@
 
 .form-newbook label {
     margin-bottom: 0.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .form-newbook input {
@@ -87,7 +88,7 @@
 
 .btn-newbook {
     opacity: 0.7;
-    background-color: #146b38;
+    background-color:  #f5865f;
     padding: 10px 20px;
     width: 70%;
     margin-left: 100px;
@@ -103,7 +104,7 @@
 }
 
 .btn-newbook:hover {
-    background-color: #146b38;
+    background-color:  #f5865f;
     color: white;
     opacity: 1;
     transition: opacity 0.5s;
@@ -111,11 +112,11 @@
 
 
 .back-to-adminpage {
-    background-color: #0e43c0
+    background-color: #2e2f35
 }
 
 .back-to-adminpage:hover {
-    background-color: #0e43c0;
+    background-color: #2e2f35
 }
 .backmenu{
     margin-left: 18%;

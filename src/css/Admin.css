@@ -1,20 +1,24 @@
 .container-admin {
     min-height: 700px;
     text-align: center;
-    margin-left: 300px;
+    /* margin-left: 300px; */
     padding: 5% 8%;
     text-transform: uppercase;
     background-image: url('../images/');
     background-repeat: no-repeat;
     background-size: cover;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-admin {
-    background-color:rgb(253, 184, 10);
+  
+    background-color: #f6f6f6;
     padding: 2%;
     border-radius: 25px;
     max-width: 600px;
+    border-color: #2e2f35;
 }
 
 .container-admin h1 {
@@ -57,7 +61,7 @@
     text-transform: uppercase;
     font-weight: 800;
     opacity: 0.7;
-    background-color: #146b38;
+    background-color: #f5865f;
     padding: 10px 20px;
     width: 260px;
     font-size: 1rem;
@@ -72,18 +76,18 @@
 
 
 .btn-admin-home:hover {
-    background-color: #146b38;
+    background-color: #f5865f;
     color: white;
     opacity: 1;
 
 }
 
 .btn-admin-file {
-    background-color: #13c9e9;
+    background-color:  #2e2f35
 }
 
 .btn-admin-file:hover {
-    background-color: #13c9e9;
+    background-color:  #2e2f35
     ;
 
 }

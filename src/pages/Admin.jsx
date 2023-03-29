@@ -13,14 +13,14 @@ function Admin () {
 
                 <div className="admin-nav">
                     <div className="emp-field">
-                        <h3>Menu Receitas</h3>
+                        <h3>Menu Funcionarios</h3>
                         <div className="buttons-admin-menu">
-                            <Link to="/admin/newemployee"><button className="btn-admin-home admin-new-emp">Inserir receitas</button></Link>
-                            <Link to="/admin/employee"><button className="btn-admin-home btn-admin-file">Gerenciar receitas</button></Link>
+                            <Link to="/admin/newemployee"><button className="btn-admin-home admin-new-emp">Inserir funcionario</button></Link>
+                            <Link to="/admin/employee"><button className="btn-admin-home btn-admin-file">Gerenciar funcionario</button></Link>
                         </div>
                     </div>
                     <div className="book-field">
-                        <h3>Menu Livros</h3>
+                        <h3>Menu Receitas</h3>
                         <div className="buttons-admin-menu">
                             <Link to="/admin/newbook"><button className="btn-admin-home admin-new-book">Inserir receitass</button></Link>
                             <Link to="/admin/book"><button className="btn-admin-home btn-admin-file">Gerenciar receitas</button></Link>
@@ -28,12 +28,12 @@ function Admin () {
                     </div>
 
 
-                    <div className="client-field">
+                    {/* <div className="client-field">
                         <h3>Menu Cliente</h3>
                         <div className="buttons-admin-menu">
                             <Link to="/admin/client"><button className="btn-admin-home btn-admin-file">Gerenciar cadastros de usuarios</button></Link>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

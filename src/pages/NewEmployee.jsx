@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/NewEmployee.css";
-import imageEmployee from "../images/employee.jpg"
+import imageEmployee from "../images/employee.png"
 import Loading from "../images/loading.gif"
 
 function NewEmployee () {
