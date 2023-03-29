@@ -7,30 +7,21 @@ import { useCart } from "../component/CartContext";
 
 
 function Book () {
-
+  const [book, setBook] = useState([]);
   const cart = useCart()
-
-
-
-
   const add = (product, quantity) =>{
  
     cart.addWithQuantity(product, quantity)
   }
-
-  
-
-
   const { id } = useParams();
-  const [book, setBook] = useState([]);
-
   const getBook = async () => {
     try {
       const response = await blogFetch.get(`/book/${id}`);
 
       const data = response.data;
+      
 
-      setBook(data);
+      setBook(data[0]);
     } catch (error) {
       console.log(error);
     }
@@ -38,7 +29,8 @@ function Book () {
 
   useEffect(() => {
     getBook();
-  }, []);
+    
+  },[]);
 
   return (
     <div className="book-detail">
