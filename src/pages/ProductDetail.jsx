@@ -42,9 +42,10 @@ function Book () {
           </div>
           <div className="book-data-detail">
             <h1 className="nomeDasReceitas">{book.name}</h1>
+            <p><h3><img src={Panela} className="img1" />Ingredientes:</h3> <h7>{book.publishing}</h7></p>
             <p>
-              <h3><img src={Ingredientes} className="img1" />Ingredientes:</h3>  {book.author}</p>
-            <p><h3><img src={Panela} className="img1" />Modo de Preparo:</h3> <h7>{book.publishing}</h7></p>
+              <h3><img src={Ingredientes} className="img1" />Modo de preparo:</h3>  {book.author}</p>
+            
 
             <p className="description-detail"><h3><img src={Relogio} className="img1" />Tempo de preparo:</h3>{book.description}</p>
 

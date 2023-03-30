@@ -64,12 +64,13 @@ function UpdateBook() {
           <div className="form-control form-update">
             <label >Receita:</label>
             <input classname="update" type="text" name="title" id="title" placeholder="Digite a receita..." onChange={(e) => setTitle(e.target.value)} value={title || ""} required />
-            <label >Ingredientes:</label>
-            <input type="text" name="publishing" id="publishing" placeholder="Digite os ingredientes..." onChange={(e) => setPublishing(e.target.value)} value={publishing || ""}
-              required />
-            <label >Modo de Preparo:</label>
-            <input type="text" name="author" id="author" placeholder="Digite o modo de preparo..."
+             <label >Ingredientes:</label>
+            <input type="text" name="author" id="author" placeholder="Digite os ingredientes..."
               onChange={(e) => setAuthor(e.target.value)} value={author || ""} required />
+              <label >Modo de Preparo:</label>
+            <input type="text" name="publishing" id="publishing" placeholder="Digite o modo de preparo..." onChange={(e) => setPublishing(e.target.value)} value={publishing || ""}
+              required />
+           
 
             <label >Endereço da imagem:</label>
             <input type="text" name="image" id="image" placeholder="Digite o endereço da imagem..." onChange={(e) => setImage(e.target.value)} value={image || ""}
