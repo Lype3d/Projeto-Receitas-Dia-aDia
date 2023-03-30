@@ -11,6 +11,8 @@
   margin: -2%;
   margin-bottom: -3%;
   width: 102%;
+  max-height: 200px;
+  height: 200px;
 }
 
 
@@ -49,7 +51,7 @@ header .Logo {
   height: 50px;
   padding: 10px;
   border-radius: 30px;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   width: 30%;
@@ -79,6 +81,7 @@ header .Logo {
 .header-bottom {
   display: flex;
   justify-content: space-around;
+  padding-left: 700px;
 }
 
 .linksHeader {
