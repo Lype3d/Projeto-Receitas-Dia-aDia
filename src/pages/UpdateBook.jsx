@@ -62,25 +62,25 @@ function UpdateBook() {
       <div className="edit-book-update">
         <form className="form-update" onSubmit={(e) => UpBook(e)}>
           <div className="form-control form-update">
-            <label >Título:</label>
-            <input classname="update" type="text" name="title" id="title" placeholder="Digite o título" onChange={(e) => setTitle(e.target.value)} value={title || ""} required />
-            <label >Editora:</label>
-            <input type="text" name="publishing" id="publishing" placeholder="Digite a editora" onChange={(e) => setPublishing(e.target.value)} value={publishing || ""}
+            <label >Receita:</label>
+            <input classname="update" type="text" name="title" id="title" placeholder="Digite a receita..." onChange={(e) => setTitle(e.target.value)} value={title || ""} required />
+            <label >Ingredientes:</label>
+            <input type="text" name="publishing" id="publishing" placeholder="Digite os ingredientes..." onChange={(e) => setPublishing(e.target.value)} value={publishing || ""}
               required />
-            <label >Autor:</label>
-            <input type="text" name="author" id="author" placeholder="Digite o autor"
+            <label >Modo de Preparo:</label>
+            <input type="text" name="author" id="author" placeholder="Digite o modo de preparo..."
               onChange={(e) => setAuthor(e.target.value)} value={author || ""} required />
 
             <label >Endereço da imagem:</label>
-            <input type="text" name="image" id="image" placeholder="Digite o endereço da imagem" onChange={(e) => setImage(e.target.value)} value={image || ""}
+            <input type="text" name="image" id="image" placeholder="Digite o endereço da imagem..." onChange={(e) => setImage(e.target.value)} value={image || ""}
               required />
           </div>
 
           <div className="form-control form-update">
-            <label >Descrição:</label>
-            <textarea name="description" id="description" placeholder="Digite a descrição..." onChange={(e) => setDescription(e.target.value)} value={description || ""}></textarea>
+            <label >Tempo de preparo:</label>
+            <textarea name="description" id="description" placeholder="Digite o tempo de preparo..." onChange={(e) => setDescription(e.target.value)} value={description || ""}></textarea>
           </div>
-          <button type="submit" className="btn-update mb-2" id="updatebook">Editar Livro</button>
+          <button type="submit" className="btn-update mb-2" id="updatebook">Editar Receita</button>
           <Link to="/admin"><input type="button" value="Voltar" className="btn-back" /></Link>
         </form>
       </div>

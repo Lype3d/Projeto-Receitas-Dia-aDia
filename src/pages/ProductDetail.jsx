@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import '../css/ProductDetail.css'
 import { useCart } from "../component/CartContext";
-
-
+import Ingredientes from '../images/ingredientes.svg';
+import Panela from '../images/panela.png';
+import Relogio from '../images/relogio.svg';
 
 function Book () {
   const [book, setBook] = useState([]);
@@ -40,12 +41,12 @@ function Book () {
             <img className="book-image-detail" src={book.image} />
           </div>
           <div className="book-data-detail">
-            <h1>{book.name}</h1>
+            <h1 className="nomeDasReceitas">{book.name}</h1>
             <p>
-              Ingredientes: <br /> {book.author}</p>
-            <p>Modo de Preparo: <br /> {book.publishing}</p>
+              <h3><img src={Ingredientes} className="img1" />Ingredientes:</h3>  {book.author}</p>
+            <p><h3><img src={Panela} className="img1" />Modo de Preparo:</h3> <h7>{book.publishing}</h7></p>
 
-            <p className="description-detail">Tempo de preparo: <br /> {book.description}</p>
+            <p className="description-detail"><h3><img src={Relogio} className="img1" />Tempo de preparo:</h3>{book.description}</p>
 
             
            
