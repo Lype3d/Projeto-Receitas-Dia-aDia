@@ -19,8 +19,6 @@ function Book () {
       const response = await blogFetch.get(`/book/${id}`);
 
       const data = response.data;
-      
-
       setBook(data[0]);
     } catch (error) {
       console.log(error);

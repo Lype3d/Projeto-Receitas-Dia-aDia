@@ -6,35 +6,36 @@ import "../css/NewBook.css";
 import imageNew from "../images/insira.png"
 import Loading from "../images/loading.gif"
 
-function NewBook () {
+function NewBook() {
     const navigate = useNavigate();
 
-    const [title, setTitle] = useState();
-    const [publishing, setPublishing] = useState();
-    const [author, setAuthor] = useState();
-    const [description, setDescription] = useState();
-    const [price, setPrice] = useState();
-    const [image, setImage] = useState();
+    const [name, setTitle] = useState('');
+    const [publishing, setPublishing] = useState('');
+    const [author, setAuthor] = useState('');
+    const [description, setDescription] = useState('');
+    const [image, setImage] = useState('');
 
     const createBook = async (e) => {
         e.preventDefault();
+        // const btnblock = document.getElementById('createnewbook');
+        // btnblock.setAttribute("disabled", "");
+        // btnblock.innerHTML = `<img src=${Loading} width="25px" height="25px"/>`
 
-        const btnblock = document.getElementById('createnewbook');
-        btnblock.setAttribute("disabled", "");
-        btnblock.innerHTML = `<img src=${Loading} width="25px" height="25px"/>`
-
-
-        await blogFetch.post("/book", {
-            id: '',
-            name: title,
+        const book = {
+            name: name,
             publishing: publishing,
             author: author,
             description: description,
-            price: price,
-            image: image,
-        });
+            image: image
+        }
+        console.log(book)
+        await blogFetch.post('/book', book).then((response) => {
+            console.log(response.data)
+        }).catch((erro) => {
+            console.log(erro)
+        })
 
-        navigate("/admin");
+        // navigate("/admin");
     };
 
     return (<main className="main-newbook">
@@ -42,32 +43,33 @@ function NewBook () {
         <div className="new-book-newbook">
             <form onSubmit={(e) => createBook(e)} className="form-newbook">
                 <div className="form-control form-newbook">
-                    <label >Título:</label>
-                    <input type="text" name="title" id="title" placeholder="Digite o título"
+                    <label >Receita:</label>
+                    <input type="text" name="title" id="title" placeholder="Digite a Receita"
                         onChange={(e) => setTitle(e.target.value)} className="input-newbook"
-                    required/>
-                    <label >Editora:</label>
-                    <input type="text" name="publishing" id="publishing" placeholder="Digite a editora"
+                        required />
+                    <label >Ingredientes:</label>
+                    <input type="text" name="publishing" id="publishing" placeholder="Digite os ingredientes"
                         onChange={(e) => setPublishing(e.target.value)} className="input-newbook"
-                        required/>
-                    <label >Autor:</label>
-                    <input type="text" name="author" id="author" placeholder="Digite o autor"
+                        required />
+                    <label >Modo de Preparo:</label>
+                    <input type="text" name="author" id="author" placeholder="Digite o Modo de Preparo"
                         onChange={(e) => setAuthor(e.target.value)} className="input-newbook"
-                        required/>
-                    <label >Preço:(ex.: 45.99)</label>
+                        required />
+                    {/* <label >Preço:(ex.: 45.99)</label>
                     <input type="number" name="price" id="price" min="0" max="100000" step=".01" placeholder="Digite o valor"
                         onChange={(e) => setPrice(e.target.value)} className="input-newbook"
-                        required />
+                        required /> */}
                     <label >Endereço da imagem:</label>
                     <input type="text" name="image" id="image" placeholder="Digite o endereço da imagem"
                         onChange={(e) => setImage(e.target.value)} className="input-newbook"
-                        required/>
+                        required />
                 </div>
                 <div className="form-control form-newbook">
-                    <label htmlFor="description">Descrição:</label>
-                    <textarea name="description" className="textarea-newbook" id="description" placeholder="Digite a descrição..." onChange={(e) => setDescription(e.target.value)} required></textarea>
+                    <label htmlFor="description">Tempo de preparo:</label>
+                    <textarea name="description" className="textarea-newbook" id="description" placeholder="Digite o tempo de preparo..."
+                        onChange={(e) => setDescription(e.target.value)} required></textarea>
                 </div>
-                <button type="submit" value="Cadastrar Livro" className="btn-newbook mb-2"  id="createnewbook">Cadastrar Livro </button>
+                <button type="submit" value="Cadastrar Livro" className="btn-newbook mb-2" id="createnewbook">Cadastrar Livro </button>
                 <Link to="/admin"><button className="btn-newbook backmenu back-to-adminpage" >Voltar</button></Link>
             </form>
         </div>

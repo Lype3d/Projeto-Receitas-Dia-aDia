@@ -4,14 +4,13 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import '../css/UpdateBook.css'
 import Loading from "../images/loading.gif"
 
-function UpdateBook () {
+function UpdateBook() {
   const navigate = useNavigate();
 
   const [title, setTitle] = useState();
   const [publishing, setPublishing] = useState();
   const [author, setAuthor] = useState();
   const [description, setDescription] = useState();
-  const [price, setPrice] = useState();
   const [image, setImage] = useState();
 
   const { id } = useParams();
@@ -22,12 +21,7 @@ function UpdateBook () {
 
       const data = response.data;
 
-      setTitle(data.name);
-      setPublishing(data.publishing);
-      setAuthor(data.author);
-      setDescription(data.description);
-      setPrice(data.price);
-      setImage(data.image);
+      
     } catch (error) {
       console.log(error);
     }
@@ -40,16 +34,18 @@ function UpdateBook () {
     btnblock.setAttribute("disabled", "");
     btnblock.innerHTML = `<img src=${Loading} width="25px" height="25px"/>`
 
-
-    await blogFetch.put(`/book/${id}`, {
-      id: id,
+    const book = {
       name: title,
       publishing: publishing,
       author: author,
       description: description,
-      price: price,
-      image: image,
-    });
+      image: image
+    }
+    await blogFetch.put(`/book/${id}`, book).then((response) => {
+      console.log(response)
+    }).catch((erro) => {
+      console.log(erro)
+    })
 
     navigate("/admin");
   };
@@ -67,19 +63,17 @@ function UpdateBook () {
         <form className="form-update" onSubmit={(e) => UpBook(e)}>
           <div className="form-control form-update">
             <label >Título:</label>
-            <input classname="update" type="text" name="title" id="title" placeholder="Digite o título" onChange={(e) => setTitle(e.target.value)} value={title || ""} required/>
+            <input classname="update" type="text" name="title" id="title" placeholder="Digite o título" onChange={(e) => setTitle(e.target.value)} value={title || ""} required />
             <label >Editora:</label>
             <input type="text" name="publishing" id="publishing" placeholder="Digite a editora" onChange={(e) => setPublishing(e.target.value)} value={publishing || ""}
-            required/>
+              required />
             <label >Autor:</label>
             <input type="text" name="author" id="author" placeholder="Digite o autor"
-              onChange={(e) => setAuthor(e.target.value)} value={author || ""} required/>
-            <label >Preço:(ex.: 45.99)</label>
-            <input type="number" name="price" id="price" min="0" max="100000" step=".01" placeholder="Digite o valor" onChange={(e) => setPrice(e.target.value)} value={price || ""}
-           required />
+              onChange={(e) => setAuthor(e.target.value)} value={author || ""} required />
+
             <label >Endereço da imagem:</label>
             <input type="text" name="image" id="image" placeholder="Digite o endereço da imagem" onChange={(e) => setImage(e.target.value)} value={image || ""}
-            required/>
+              required />
           </div>
 
           <div className="form-control form-update">
