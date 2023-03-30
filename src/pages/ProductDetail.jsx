@@ -41,15 +41,14 @@ function Book () {
           </div>
           <div className="book-data-detail">
             <h1>{book.name}</h1>
-            <p>{book.author}</p>
-            <p>{book.publishing}</p>
+            <p>
+              Ingredientes: <br /> {book.author}</p>
+            <p>Modo de Preparo: <br /> {book.publishing}</p>
 
-            <p className="description-detail">{book.description}</p>
+            <p className="description-detail">Tempo de preparo: <br /> {book.description}</p>
 
-            <input type="number" className="qtn-book-detail" id="qtn-book-detail" min="1" defaultValue="1" />
-            <button className="btn-detail"	onClick= {() => {
-              const quantity = document.getElementById("qtn-book-detail")
-              add(book, Number(quantity.value))}}>	Adicionar ao carrinho</button>
+            
+           
           </div>
         </div>
       )}
