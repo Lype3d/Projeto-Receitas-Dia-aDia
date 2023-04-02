@@ -78,7 +78,7 @@ function Home(props) {
                         alt="First slide"
                     />
                     <Carousel.Caption className='text-carrousel'>
-                        <h1>Lasanha à Bolonhesa</h1>
+                        <h1>Lasanha de Bacalhau</h1>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -90,7 +90,7 @@ function Home(props) {
                     />
 
                     <Carousel.Caption className='text-carrousel'>
-                        <h1>Frango Empanado </h1>
+                        <h1>Strogonoff de Frango </h1>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -102,12 +102,34 @@ function Home(props) {
                     />
 
                     <Carousel.Caption className='text-carrousel'>
-                        <h1>Bolo de Chocolate</h1>
+                        <h1>Brownie de Chocolate</h1>
 
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            <div className="queiridinhasDiv">
+                
+                <h1 className="queridinhas">As queridinhas do momento:</h1>
+                <div className="SpaceCard">
 
+
+                    <div className="products-home">
+                        {books.length === 0 ? (<div className="loader"></div>) : (
+                            books.slice(0, 3).map((book) => (
+                                <div className="product-home" key={book.id}>
+                                    <img className="product-image-home" src={book.image} />
+                                    <h4 className="product-name-home">{book.name}</h4>
+                                    <div className="buttons-home">
+                                        <Link to={`/products/${book.id}`} className="btn-home">Ler mais</Link>
+                                        
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </div>
+
+                </div>
+            </div >
         </div >
         
 

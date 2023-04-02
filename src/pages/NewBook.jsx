@@ -47,14 +47,15 @@ function NewBook() {
                     <input type="text" name="title" id="title" placeholder="Digite a Receita"
                         onChange={(e) => setTitle(e.target.value)} className="input-newbook"
                         required />
-                    <label >Ingredientes:</label>
-                    <input type="text" name="publishing" id="publishing" placeholder="Digite os ingredientes"
-                        onChange={(e) => setPublishing(e.target.value)} className="input-newbook"
-                        required />
-                    <label >Modo de Preparo:</label>
-                    <input type="text" name="author" id="author" placeholder="Digite o Modo de Preparo"
+                        <label >Ingredientes:</label>
+                    <input type="text" name="author" id="author" placeholder="Digite os ingredientes"
                         onChange={(e) => setAuthor(e.target.value)} className="input-newbook"
                         required />
+                    <label >Modo de Preparo:</label>
+                    <input type="text" name="publishing" id="publishing" placeholder="Digite o Modo de Preparo"
+                        onChange={(e) => setPublishing(e.target.value)} className="input-newbook"
+                        required />
+                    
                     {/* <label >Preço:(ex.: 45.99)</label>
                     <input type="number" name="price" id="price" min="0" max="100000" step=".01" placeholder="Digite o valor"
                         onChange={(e) => setPrice(e.target.value)} className="input-newbook"
